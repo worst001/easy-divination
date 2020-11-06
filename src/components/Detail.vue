@@ -9,8 +9,9 @@
         </div>
       </div>
       <!-- 卦的汉字 -->
-      <div id="divination-word" class="">
-        <img :src="word" alt=""/>
+      <div id="divination-word" class="vertical-center">
+        <span>{{ name }}</span>
+        <!-- <img :src="word" alt=""/> -->
       </div>
     </div>
     <div id="description" class="">
@@ -51,6 +52,7 @@ export default {
     return {
       // 六爻组成的卦对象
       divination: null,
+      name: null,
       word: null,
       yuyi: null,
       guaci: null,
@@ -71,7 +73,8 @@ export default {
     */
     init: function () {
       this.divination = this.$refs.cDivination.instance
-      this.word = this.divination.getWord()
+      this.name = this.divination.getName()
+      // this.word = this.divination.getWord()
       this.yuyi = this.divination.getDescription().yuyi
       this.guaci = this.divination.getDescription().guaci
       this.yaoci = this.divination.getDescription().yaoci
@@ -98,6 +101,7 @@ export default {
     text-align: center;
     top:50%;
     margin:3rem auto;
+    padding-left:1rem;
     height: 9rem;
     width: 9rem;
   }
@@ -106,12 +110,11 @@ export default {
   height: 15rem;
   width: 50%;
   float: left;
-  img {
-    text-align: center;
-    top:50%;
-    margin:3.5rem auto;
-    height: 8rem;
-    width: 8rem;
+  span {
+    font-size: 5rem;
+    font-family: "楷体","楷体_GB2312";
+    color: antiquewhite;
+    padding-right:1rem;
   }
 }
 #description {
@@ -128,10 +131,11 @@ export default {
     .desc-para {
       color: blueviolet;
     }
+    padding: 0 2rem 0 2rem;
   }
   #description-sub {
     height: 16rem;
-    margin: 0rem;
+    margin-top: 1rem;
     padding: 0 2rem 0 2rem;
   }
 }
@@ -141,6 +145,11 @@ export default {
 .container {
   display: flex;
   /* justify-content: center; */
+  flex-direction: column;
+}
+.vertical-center {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 // 小标题

@@ -11,18 +11,19 @@ class Divination {
     *
     * @return null
     */
-    constructor (sixYao = '111111') {
+    constructor (sixYao = '') {
         // 六爻字符串 由10构成
-        // this.sixYao = ( sixYao === '' )? this.random():sixYao
-        this.sixYao = '111111'
+        this.sixYao = ( sixYao === '' )? this.random():sixYao
         // 六爻实例数组
         this.sixInstances = this.buildSix()
         // 卦名
-        this.name = Dict[sixYao].name
+        this.name = Dict[this.sixYao].name
+
         // 六爻组成的卦象图
-        this.word = Dict[sixYao].word
+        // this.word = Dict[sixYao].word
+
         // 卦辞 爻辞 寓意
-        this.description = Dict[sixYao].description
+        this.description = Dict[this.sixYao].description
     }
 
     /**
@@ -60,6 +61,16 @@ class Divination {
     */
     getWord () {
         return this.word
+    }
+
+    /**
+    * GetName
+    * 获取卦名
+    *
+    * @return name
+    */
+    getName () {
+        return this.name
     }
 
     /**
