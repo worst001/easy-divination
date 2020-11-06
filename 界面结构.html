@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@5"></script><script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.7.7/dist/browser/view.min.js"></script><script>(mathJax => {
+      mathJax.options = Object.assign({
+        skipHtmlTags: {
+          '[-]': ['code', 'pre']
+        }
+      }, mathJax.options);
+      mathJax.startup = Object.assign({
+        typeset: false
+      }, mathJax.startup);
+      window.MathJax = mathJax;
+    })({})</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script><script>((data, ...processors) => {
+        const {
+          Markmap
+        } = window.markmap;
+        Markmap.processors = processors;
+        Markmap.create('svg#mindmap', null, data);
+      })({"t":"heading","d":1,"v":"界面结构","c":[{"t":"heading","d":2,"v":"首页","c":[{"t":"bullet_list","d":3,"v":"","c":[{"t":"list_item","d":4,"v":"一天只能卜一次卦"},{"t":"list_item","d":4,"v":"卜过直接进入结果页"},{"t":"list_item","d":4,"v":"根据cookie判断是否卜过卦","c":[{"t":"list_item","d":5,"v":"date字段有值且为今天 则说明卜过"}]}]},{"t":"heading","d":3,"v":"用户头像","c":[{"t":"list_item","d":4,"v":"欢迎XX用户"}]},{"t":"heading","d":3,"v":"输入框","c":[{"t":"list_item","d":4,"v":"用户的意愿"}]},{"t":"heading","d":3,"v":"开始占卜","c":[{"t":"list_item","d":4,"v":"页面切换时渐隐"}]}]},{"t":"heading","d":2,"v":"占卜结果","c":[{"t":"bullet_list","d":3,"v":"","c":[{"t":"paragraph","d":4,"v":"展示用户的占卜结果"}]},{"t":"heading","d":3,"v":"卦象图","c":[{"t":"list_item","d":4,"v":"阴阳二乂组成"},{"t":"list_item","d":4,"v":"一共6位"}]},{"t":"heading","d":3,"v":"卦辞","c":[{"t":"list_item","d":4,"v":"字体偏大"}]},{"t":"heading","d":3,"v":"爻辞","c":[{"t":"list_item","d":4,"v":"字体偏小"}]},{"t":"heading","d":3,"v":"寓意","c":[{"t":"list_item","d":4,"v":"标红"}]},{"t":"heading","d":3,"v":"分享","c":[{"t":"list_item","d":4,"v":"截图分享"}]}]}]},function transform(nodes, mm) {
+  var _MathJax$typeset, _MathJax;
+
+  (_MathJax$typeset = (_MathJax = window.MathJax).typeset) == null ? void 0 : _MathJax$typeset.call(_MathJax, nodes);
+})</script>
+</body>
+</html>

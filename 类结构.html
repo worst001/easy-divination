@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@5"></script><script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.7.7/dist/browser/view.min.js"></script><script>(mathJax => {
+      mathJax.options = Object.assign({
+        skipHtmlTags: {
+          '[-]': ['code', 'pre']
+        }
+      }, mathJax.options);
+      mathJax.startup = Object.assign({
+        typeset: false
+      }, mathJax.startup);
+      window.MathJax = mathJax;
+    })({})</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script><script>((data, ...processors) => {
+        const {
+          Markmap
+        } = window.markmap;
+        Markmap.processors = processors;
+        Markmap.create('svg#mindmap', null, data);
+      })({"t":"heading","d":1,"v":"类结构(组件)","c":[{"t":"heading","d":2,"v":"卦象类","c":[{"t":"list_item","d":3,"v":"属性","c":[{"t":"list_item","d":4,"v":"卦象名","c":[{"t":"list_item","d":5,"v":"通过映射获取楷体字"}]},{"t":"list_item","d":4,"v":"六乂","c":[{"t":"list_item","d":5,"v":"每个乂用原型模式生成"}]},{"t":"list_item","d":4,"v":"描述","c":[{"t":"list_item","d":5,"v":"卦辞"},{"t":"list_item","d":5,"v":"乂辞"},{"t":"list_item","d":5,"v":"寓意"}]}]},{"t":"list_item","d":3,"v":"行为","c":[{"t":"list_item","d":4,"v":"获取名字图"},{"t":"list_item","d":4,"v":"勾画六爻"}]}]},{"t":"heading","d":2,"v":"乂类(抽象)","c":[{"t":"list_item","d":3,"v":"属性","c":[{"t":"list_item","d":4,"v":"阴阳值"},{"t":"list_item","d":4,"v":"颜色"}]},{"t":"list_item","d":3,"v":"行为","c":[{"t":"list_item","d":4,"v":"勾画乂(状态模式)"}]}]},{"t":"heading","d":2,"v":"阳乂","c":[{"t":"list_item","d":3,"v":"属性","c":[{"t":"list_item","d":4,"v":"阳"},{"t":"list_item","d":4,"v":"红"}]},{"t":"list_item","d":3,"v":"行为","c":[{"t":"list_item","d":4,"v":"勾画阳<br/>长条矩阵"}]}]},{"t":"heading","d":2,"v":"阴乂","c":[{"t":"list_item","d":3,"v":"属性","c":[{"t":"list_item","d":4,"v":"阴"},{"t":"list_item","d":4,"v":"蓝"}]},{"t":"list_item","d":3,"v":"行为","c":[{"t":"list_item","d":4,"v":"勾画阴<br/>代间距的两个长条矩阵"}]}]}]},function transform(nodes, mm) {
+  var _MathJax$typeset, _MathJax;
+
+  (_MathJax$typeset = (_MathJax = window.MathJax).typeset) == null ? void 0 : _MathJax$typeset.call(_MathJax, nodes);
+})</script>
+</body>
+</html>
